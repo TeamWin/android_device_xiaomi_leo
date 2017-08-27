@@ -1,0 +1,29 @@
+From 0beb4c9971ebd58cb569af7c5e5dd7587133a3a7 Mon Sep 17 00:00:00 2001
+From: GuaiYiHu <guaiyihu@foxmail.com>
+Date: Wed, 23 Aug 2017 20:49:55 +0800
+Subject: [PATCH] sensorservice: add patch for MIUI sensors
+
+Change-Id: I1b7a492ec478a15437db2f4421e4c1354faa1382
+---
+ services/sensorservice/SensorDevice.cpp | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/services/sensorservice/SensorDevice.cpp b/services/sensorservice/SensorDevice.cpp
+index 7d9b0b7..6e5c518 100644
+--- a/services/sensorservice/SensorDevice.cpp
++++ b/services/sensorservice/SensorDevice.cpp
+@@ -373,7 +373,11 @@ status_t SensorDevice::setDelay(void* ident, int handle, int64_t samplingPeriodN
+ 
+ int SensorDevice::getHalDeviceVersion() const {
+     if (mSensors == nullptr) return -1;
++#ifdef IS_MIUI_SENSOR
++    return 1;
++#else
+     return SENSORS_DEVICE_API_VERSION_1_4;
++#endif
+ }
+ 
+ status_t SensorDevice::flush(void* ident, int handle) {
+-- 
+2.7.4
+
