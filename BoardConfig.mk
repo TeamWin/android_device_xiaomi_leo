@@ -229,7 +229,7 @@ TW_NO_EXFAT := true
 endif
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_leo
+# TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_leo
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # SELinux
