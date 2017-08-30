@@ -119,10 +119,10 @@ PRODUCT_COPY_FILES += \
     prebuilts/sdk/org.apache.http.legacy/org.apache.http.legacy.jar:/system/framework/org.apache.http.legacy.jar
 
 #ANT+ stack
-PRODUCT_PACKAGES += \
-    com.dsi.ant.antradio_library \
-    AntHalService \
-    libantradio
+#PRODUCT_PACKAGES += \
+#    com.dsi.ant.antradio_library \
+#    AntHalService \
+#    libantradio
 
 # Audio
 PRODUCT_PACKAGES += \
