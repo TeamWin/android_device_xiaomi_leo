@@ -1,2 +1,0 @@
-allow rfs_access self:capability { net_raw };
-# >neverallow< allow rfs_access debugfs:file { write open };
