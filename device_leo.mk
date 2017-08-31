@@ -248,7 +248,6 @@ PRODUCT_PACKAGES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
-    keystore.msm8994 \
     android.hardware.keymaster@3.0-impl
 
 # IRSC
