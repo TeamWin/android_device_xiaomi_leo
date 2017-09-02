@@ -24,3 +24,12 @@ LOCAL_MODULE := libshims_is_wifi_driver_loaded
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES := libwifi-hal
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := MediaBuffer.cpp
+LOCAL_SHARED_LIBRARIES          += libui libgui libstagefright_foundation
+LOCAL_C_INCLUDES                += framework/native/include frameworks/av/include
+LOCAL_CFLAGS                    += -Wno-unused-private-field
+LOCAL_MODULE := libshims_ims
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_SHARED_LIBRARY)
