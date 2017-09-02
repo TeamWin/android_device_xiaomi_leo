@@ -198,6 +198,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/gps/xtwifi.conf:system/etc/xtwifi.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
+
+# Seccomp policy
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy
     
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
